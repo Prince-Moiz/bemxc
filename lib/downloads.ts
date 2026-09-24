@@ -70,18 +70,18 @@ export const DOWNLOADS: DownloadRelease[] = [
     id: "android",
     name: "Android",
     subtitle: "Phone and tablet · sideload APK",
-    version: "1.0.1",
+    version: "1.0.2",
     size: "13.4 MB",
-    fileName: "BEMXC-1.0.1-release.apk",
+    fileName: "BEMXC-1.0.2-release.apk",
     sha256:
-      "d288338202f3ef13343f997660c04c9d8c2df6d4cba5a4d1191cae5cb482c633",
+      "075e14c4f597c66ab1ed140ac25c57d09bbfd882de399a4bcd1e03b8f6cf1082",
     requirements: "Android 7.0 (API 24) or later",
     notes: [
       "Release build (non-debug) signed for sideload installs.",
       "Also mirrored at /android/latest.apk on the CDN.",
       "In-app auto-update checks https://fcm.accsgold.com/updates/latest",
     ],
-    url: `${CDN}/android/BEMXC-1.0.1-release.apk`,
+    url: `${CDN}/android/BEMXC-1.0.2-release.apk`,
     available: true,
   },
 ];
