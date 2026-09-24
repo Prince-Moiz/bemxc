@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { NAV_LINKS, SITE_NAME } from "@/lib/site";
 import { LogoMark } from "@/components/logo-mark";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -14,7 +15,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-ink/10 bg-background/85 backdrop-blur-xl">
       <a
         href="#content"
-        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-50 focus:rounded-md focus:bg-white focus:px-3 focus:py-2 focus:text-obsidian"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-50 focus:rounded-md focus:bg-background focus:px-3 focus:py-2 focus:text-ink focus:ring-2 focus:ring-ink/20"
       >
         Skip to content
       </a>
@@ -48,10 +49,11 @@ export function SiteHeader() {
           })}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
+          <ThemeToggle />
           <Link
             href="/download"
-            className="hidden rounded-full bg-ink px-4 py-2 font-mono text-[12px] font-medium tracking-wide text-white transition-opacity hover:opacity-90 sm:inline-flex"
+            className="hidden rounded-full bg-foreground px-4 py-2 font-mono text-[12px] font-medium tracking-wide text-background transition-opacity hover:opacity-90 sm:inline-flex"
           >
             [ Launch Terminal ]
           </Link>
@@ -92,7 +94,7 @@ export function SiteHeader() {
             <li>
               <Link
                 href="/download"
-                className="mt-2 inline-flex rounded-full bg-ink px-4 py-2 font-mono text-[12px] font-medium text-white"
+                className="mt-2 inline-flex rounded-full bg-foreground px-4 py-2 font-mono text-[12px] font-medium text-background"
                 onClick={() => setOpen(false)}
               >
                 [ Launch Terminal ]

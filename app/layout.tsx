@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { ThemeProvider } from "@/components/theme-provider";
 import { JsonLdScript } from "@/components/json-ld";
 import {
   financialProductJsonLd,
@@ -74,25 +75,36 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#F6F7F9",
-  colorScheme: "light",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#F6F7F9" },
+    { media: "(prefers-color-scheme: dark)", color: "#0A0D12" },
+  ],
+  colorScheme: "light dark",
 };
+
+const themeInitScript = `(function(){try{var k='bemxc-theme';var t=localStorage.getItem(k);if(t!=='light'&&t!=='dark'){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}var r=document.documentElement;r.classList.toggle('dark',t==='dark');r.style.colorScheme=t}catch(e){}})();`;
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
-        <JsonLdScript data={organizationJsonLd} />
-        <JsonLdScript data={financialProductJsonLd} />
-        <JsonLdScript data={softwareApplicationJsonLd} />
-        <SiteHeader />
-        <div id="content" className="flex flex-1 flex-col">
-          {children}
-        </div>
-        <SiteFooter />
+        <ThemeProvider>
+          <JsonLdScript data={organizationJsonLd} />
+          <JsonLdScript data={financialProductJsonLd} />
+          <JsonLdScript data={softwareApplicationJsonLd} />
+          <SiteHeader />
+          <div id="content" className="flex-1 flex flex-col">
+            {children}
+          </div>
+          <SiteFooter />
+        </ThemeProvider>
       </body>
     </html>
   );

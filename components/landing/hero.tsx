@@ -14,7 +14,7 @@ export function Hero() {
       aria-labelledby="hero-heading"
       className="relative overflow-hidden"
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-10%,rgba(5,150,105,0.14),transparent_60%)]" />
+      <div className="pointer-events-none absolute inset-0 hero-glow" />
       <div className="pointer-events-none absolute inset-0 bg-grid opacity-40" />
 
       <div className="relative mx-auto grid w-full max-w-7xl items-center gap-16 px-5 pb-20 pt-16 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:pb-28 lg:pt-24">
@@ -36,7 +36,7 @@ export function Hero() {
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <Link
               href="/download"
-              className="inline-flex h-12 items-center justify-center rounded-full bg-ink px-6 text-sm font-medium text-white transition-opacity hover:opacity-90"
+              className="inline-flex h-12 items-center justify-center rounded-full bg-foreground px-6 text-sm font-medium text-background transition-opacity hover:opacity-90"
             >
               [ Launch Terminal ]
             </Link>

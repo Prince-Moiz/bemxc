@@ -9,7 +9,7 @@ import { LogoMark } from "@/components/logo-mark";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-ink/10 bg-[#eef0f3]">
+    <footer className="border-t border-ink/10 bg-footer">
       <div className="mx-auto grid w-full max-w-7xl gap-12 px-5 py-16 sm:px-8 md:grid-cols-5">
         <div className="md:col-span-2">
           <Link href="/" className="inline-flex items-center text-ink" aria-label={`${SITE_NAME} home`}>

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function DownloadPage() {
   return (
     <main className="relative overflow-hidden">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_40%_at_50%_-10%,rgba(5,150,105,0.12),transparent_60%)]" />
+      <div className="pointer-events-none absolute inset-0 hero-glow" />
       <div className="relative mx-auto w-full max-w-7xl px-5 pb-24 pt-16 sm:px-8">
         <header className="max-w-2xl">
           <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-emerald">
