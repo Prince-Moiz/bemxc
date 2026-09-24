@@ -14,6 +14,8 @@ export function DownloadGrid() {
 }
 
 function DownloadCard({ release }: { release: DownloadRelease }) {
+  const canDownload = release.available && Boolean(release.url);
+
   return (
     <article
       id={release.id}
@@ -26,13 +28,15 @@ function DownloadCard({ release }: { release: DownloadRelease }) {
           </h2>
           <p className="mt-1 text-sm text-white/50">{release.subtitle}</p>
         </div>
-        <p className="font-mono text-[12px] text-emerald">v{release.version}</p>
+        <p className="font-mono text-[12px] text-emerald">
+          {release.available ? `v${release.version}` : "Soon"}
+        </p>
       </div>
 
       <dl className="mt-6 grid grid-cols-2 gap-4 font-mono text-[12px]">
         <div>
           <dt className="text-white/35">Build</dt>
-          <dd className="mt-1 text-white/80">{release.fileName}</dd>
+          <dd className="mt-1 break-all text-white/80">{release.fileName}</dd>
         </div>
         <div>
           <dt className="text-white/35">Size</dt>
@@ -55,14 +59,26 @@ function DownloadCard({ release }: { release: DownloadRelease }) {
         </ul>
       </div>
 
-      <ChecksumBlock sha256={release.sha256} />
+      {release.available && release.sha256 !== "—" ? (
+        <ChecksumBlock sha256={release.sha256} />
+      ) : null}
 
-      <p
-        className="mt-6 inline-flex h-11 w-full items-center justify-center rounded-full border border-white/12 bg-white/8 text-sm font-medium text-white/70"
-        aria-label={`${release.name} download available soon`}
-      >
-        Available soon
-      </p>
+      {canDownload ? (
+        <a
+          href={release.url}
+          className="mt-6 inline-flex h-11 w-full items-center justify-center rounded-full bg-emerald text-sm font-medium text-obsidian transition hover:bg-white"
+          download={release.fileName}
+        >
+          Download APK
+        </a>
+      ) : (
+        <p
+          className="mt-6 inline-flex h-11 w-full items-center justify-center rounded-full border border-white/12 bg-white/8 text-sm font-medium text-white/70"
+          aria-label={`${release.name} download available soon`}
+        >
+          Available soon
+        </p>
+      )}
     </article>
   );
 }

@@ -10,82 +10,78 @@ export type DownloadRelease = {
   sha256: string;
   requirements: string;
   notes: string[];
+  /** Direct CDN URL. Omit / empty = not ready yet. */
+  url?: string;
+  available: boolean;
 };
+
+const CDN = "https://cdn.bemxc.com";
 
 export const DOWNLOADS: DownloadRelease[] = [
   {
     id: "macos",
     name: "macOS",
     subtitle: "Universal (Apple silicon + Intel)",
-    version: "1.2.0",
-    size: "142 MB",
-    fileName: "bemxc-macos-universal-1.2.0.dmg",
-    sha256: "8f3c6a1d9e2b74c0a5d18f6b4e91c027d5a8b3e1f6c40972a1d5e8b0c3f7a294",
+    version: "—",
+    size: "—",
+    fileName: "coming-soon.dmg",
+    sha256: "—",
     requirements: "macOS 13 Ventura or later",
-    notes: [
-      "Native menu bar ticker and Touch ID unlock for webhook secrets.",
-      "Fixes a settlement race on multi-broker EUR/USD tick feeds.",
-      "Adds Playground draft autosave across Spaces.",
-    ],
+    notes: ["Desktop build ships after Android auto-update is stable."],
+    available: false,
   },
   {
     id: "windows",
     name: "Windows",
     subtitle: "x64 installer",
-    version: "1.2.0",
-    size: "128 MB",
-    fileName: "bemxc-windows-x64-1.2.0.exe",
-    sha256: "1b9e04c7a6d532f8e0c14a97b5d2e6813f70c9a4d8b2156e0f3a7c1d94e2b850",
+    version: "—",
+    size: "—",
+    fileName: "coming-soon.exe",
+    sha256: "—",
     requirements: "Windows 10 22H2 or later",
-    notes: [
-      "Hardware-accelerated tape rendering on DirectX 12.",
-      "Corrects timezone drift on Win Rate settlement windows.",
-      "Webhook secret now stored in Windows Credential Manager.",
-    ],
+    notes: ["Desktop build ships after Android auto-update is stable."],
+    available: false,
   },
   {
     id: "linux",
     name: "Linux",
     subtitle: "AppImage · amd64",
-    version: "1.2.0",
-    size: "136 MB",
-    fileName: "bemxc-linux-x86_64-1.2.0.AppImage",
-    sha256: "c4a70e29b1f8563d0e9a27c5d14b8f02a6e3d917c8b0451f2e6a9d3c7b10e584",
+    version: "—",
+    size: "—",
+    fileName: "coming-soon.AppImage",
+    sha256: "—",
     requirements: "glibc 2.35+, Wayland or X11",
-    notes: [
-      "AppImage, .deb, and .rpm ship the same protocol build.",
-      "Fixes tray icon theming on GNOME 46.",
-      "Headless mode for desk operators: `bemxc --tape`.",
-    ],
+    notes: ["Desktop build ships after Android auto-update is stable."],
+    available: false,
   },
   {
     id: "ios",
     name: "iOS",
     subtitle: "iPhone and iPad",
-    version: "1.1.4",
-    size: "86 MB",
-    fileName: "bemxc-ios-1.1.4.ipa",
-    sha256: "7d2e91a0c5b348f6e1a04d89b3c7f2150e6a9d42c8b1735f0a4e6c1d9b28f370",
+    version: "—",
+    size: "—",
+    fileName: "coming-soon.ipa",
+    sha256: "—",
     requirements: "iOS 17 or later",
-    notes: [
-      "Live Activities for open verified calls.",
-      "Face ID lock on desk-chat execution confirms.",
-      "Watch complication shows Trust Score delta.",
-    ],
+    notes: ["App Store / TestFlight distribution not enabled yet."],
+    available: false,
   },
   {
     id: "android",
     name: "Android",
-    subtitle: "Phone and tablet",
-    version: "1.1.4",
-    size: "79 MB",
-    fileName: "bemxc-android-1.1.4.apk",
-    sha256: "e5b10c38a7d24691f0c3e85a2b94d0176e1a8c4f9d3052b7a6c0e4d1f8b29713",
-    requirements: "Android 13 or later",
+    subtitle: "Phone and tablet · sideload APK",
+    version: "1.0.1",
+    size: "13.4 MB",
+    fileName: "BEMXC-1.0.1-release.apk",
+    sha256:
+      "d288338202f3ef13343f997660c04c9d8c2df6d4cba5a4d1191cae5cb482c633",
+    requirements: "Android 7.0 (API 24) or later",
     notes: [
-      "Material You tape with system accent mapping.",
-      "Play Integrity attestation for sideload APK builds.",
-      "Fixes notification grouping on Pixel 9.",
+      "Release build (non-debug) signed for sideload installs.",
+      "Also mirrored at /android/latest.apk on the CDN.",
+      "In-app auto-update checks https://fcm.accsgold.com/updates/latest",
     ],
+    url: `${CDN}/android/BEMXC-1.0.1-release.apk`,
+    available: true,
   },
 ];

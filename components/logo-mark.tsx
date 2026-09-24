@@ -1,24 +1,40 @@
+"use client";
+
+/** BEMXC X mark: continuous slate bar (TL→BR) over split green (BL / TR). */
 export function LogoMark({ className }: { className?: string }) {
   return (
     <svg
-      viewBox="0 0 24 24"
+      viewBox="0 0 128 128"
       fill="none"
       aria-hidden
       className={className}
     >
-      <rect
-        x="1.5"
-        y="1.5"
-        width="21"
-        height="21"
-        rx="6"
-        stroke="currentColor"
-        strokeWidth="1.4"
-      />
-      <path
-        d="M7 15.5V8.5h4.2c1.7 0 2.8.9 2.8 2.25 0 .82-.42 1.5-1.14 1.88 1.02.32 1.64 1.12 1.64 2.17 0 1.5-1.18 2.7-3.12 2.7H7Zm2.05-4.55h1.9c.72 0 1.16-.38 1.16-.98s-.44-.96-1.16-.96H9.05v1.94Zm0 3.42h2.18c.82 0 1.3-.42 1.3-1.08 0-.66-.48-1.06-1.3-1.06H9.05v2.14Z"
-        fill="#10B981"
-      />
+      <g transform="translate(64 64)">
+        <rect
+          x="-10"
+          y="-56"
+          width="20"
+          height="38"
+          fill="#58B078"
+          transform="rotate(45)"
+        />
+        <rect
+          x="-10"
+          y="18"
+          width="20"
+          height="38"
+          fill="#58B078"
+          transform="rotate(45)"
+        />
+        <rect
+          x="-10"
+          y="-56"
+          width="20"
+          height="112"
+          fill="currentColor"
+          transform="rotate(-45)"
+        />
+      </g>
     </svg>
   );
 }
