@@ -83,28 +83,28 @@ export default function ExecutionDisclaimerPage() {
         faqJsonLd(faqs),
       ]}
     >
-      <nav aria-label="On this page" className="mb-10 rounded-2xl border border-white/8 bg-white/[0.03] p-5">
-        <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-white/40">
+      <nav aria-label="On this page" className="mb-10 rounded-2xl border border-ink/10 bg-ink/[0.03] p-5">
+        <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink/45">
           Contents
         </p>
-        <ol className="mt-3 space-y-2 font-mono text-[12px] text-white/65">
+        <ol className="mt-3 space-y-2 font-mono text-[12px] text-ink/70">
           <li>
-            <a href="#legal" className="hover:text-white">
+            <a href="#legal" className="hover:text-ink">
               1. Legal architecture
             </a>
           </li>
           <li>
-            <a href="#non-custodial" className="hover:text-white">
+            <a href="#non-custodial" className="hover:text-ink">
               2. Non-custodial webhook execution
             </a>
           </li>
           <li>
-            <a href="#risks" className="hover:text-white">
+            <a href="#risks" className="hover:text-ink">
               3. Execution risks
             </a>
           </li>
           <li>
-            <a href="#responsibility" className="hover:text-white">
+            <a href="#responsibility" className="hover:text-ink">
               4. User responsibility clause
             </a>
           </li>
@@ -133,7 +133,7 @@ export default function ExecutionDisclaimerPage() {
           <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-crimson">
             Status
           </p>
-          <p className="mt-2 text-sm leading-7 text-white/80">
+          <p className="mt-2 text-sm leading-7 text-ink/80">
             BEMXC does not hold client money, does not operate client
             accounts, and does not guarantee profit, income, win rate, or
             capital preservation. Past settlement on the ledger is not future
@@ -211,7 +211,7 @@ export default function ExecutionDisclaimerPage() {
           fill you at a worse price than the hashed entry because the book
           moved. Neither event is a protocol defect. Verification and
           execution are decoupled by design. Full lifecycle context is in{" "}
-          <a href="/articles/what-is-bemxc" className="text-emerald hover:text-white">
+          <a href="/articles/what-is-bemxc" className="text-emerald hover:text-ink">
             What is BEMXC
           </a>
           .
@@ -359,7 +359,7 @@ export default function ExecutionDisclaimerPage() {
           people confuse with “guaranteed edge” are specified in the{" "}
           <a
             href="/articles/win-rate-credibility-algorithm"
-            className="text-emerald hover:text-white"
+            className="text-emerald hover:text-ink"
           >
             Credibility Scoring article
           </a>

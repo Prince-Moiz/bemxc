@@ -28,11 +28,11 @@ export function CommunityHighlights() {
         </p>
         <h2
           id="community-heading"
-          className="mt-4 max-w-2xl text-3xl font-semibold tracking-[-0.03em] text-white sm:text-5xl"
+          className="mt-4 max-w-2xl text-3xl font-semibold tracking-[-0.03em] text-ink sm:text-5xl"
         >
           Community without fake consensus.
         </h2>
-        <p className="mt-4 max-w-2xl text-base leading-7 text-white/55">
+        <p className="mt-4 max-w-2xl text-base leading-7 text-ink/60">
           BEMXC is not a follower graph. Conversation sits on top of verified
           skill. If the score is not earned, the room does not pretend.
         </p>
@@ -45,15 +45,15 @@ export function CommunityHighlights() {
               <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-emerald">
                 {room.kicker}
               </p>
-              <h3 className="mt-4 text-2xl font-semibold tracking-[-0.02em] text-white">
+              <h3 className="mt-4 text-2xl font-semibold tracking-[-0.02em] text-ink">
                 {room.title}
               </h3>
-              <p className="mt-4 text-sm leading-6 text-white/55">{room.body}</p>
+              <p className="mt-4 text-sm leading-6 text-ink/60">{room.body}</p>
               <ul className="mt-6 space-y-2">
                 {room.points.map((point) => (
                   <li
                     key={point}
-                    className="flex items-center gap-2 font-mono text-[12px] text-white/70"
+                    className="flex items-center gap-2 font-mono text-[12px] text-ink/70"
                   >
                     <span className="h-1 w-1 rounded-full bg-emerald" />
                     {point}

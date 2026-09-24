@@ -84,28 +84,28 @@ export default function WinRateAlgorithmPage() {
         faqJsonLd(faqs),
       ]}
     >
-      <nav aria-label="On this page" className="mb-10 rounded-2xl border border-white/8 bg-white/[0.03] p-5">
-        <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-white/40">
+      <nav aria-label="On this page" className="mb-10 rounded-2xl border border-ink/10 bg-ink/[0.03] p-5">
+        <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink/45">
           Contents
         </p>
-        <ol className="mt-3 space-y-2 font-mono text-[12px] text-white/65">
+        <ol className="mt-3 space-y-2 font-mono text-[12px] text-ink/70">
           <li>
-            <a href="#raw-win-rate" className="hover:text-white">
+            <a href="#raw-win-rate" className="hover:text-ink">
               1. The flaw of raw win-rate
             </a>
           </li>
           <li>
-            <a href="#elo" className="hover:text-white">
+            <a href="#elo" className="hover:text-ink">
               2. BEMXC Elo rating mechanics
             </a>
           </li>
           <li>
-            <a href="#tiers" className="hover:text-white">
+            <a href="#tiers" className="hover:text-ink">
               3. Automated tier progression
             </a>
           </li>
           <li>
-            <a href="#demotion" className="hover:text-white">
+            <a href="#demotion" className="hover:text-ink">
               4. Demotion &amp; anti-gaming penalties
             </a>
           </li>
@@ -151,7 +151,7 @@ export default function WinRateAlgorithmPage() {
           can be widened after the fact, avg_loss shrinks in the brochure and
           not in the account. Both are structurally impossible once entry, TP,
           and SL are hashed onto the read-only log described in{" "}
-          <a href="/articles/what-is-bemxc" className="text-emerald hover:text-white">
+          <a href="/articles/what-is-bemxc" className="text-emerald hover:text-ink">
             What is BEMXC
           </a>
           .
@@ -160,7 +160,7 @@ export default function WinRateAlgorithmPage() {
           <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-crimson">
             Protocol rule
           </p>
-          <p className="mt-2 text-sm leading-7 text-white/80">
+          <p className="mt-2 text-sm leading-7 text-ink/80">
             Planned R:R below 1:2 confers no Elo gain on a win and a full Elo
             penalty on a loss. A high hit rate with a 1:0.2 payoff cannot buy a
             PRO or VIP mark.
@@ -409,7 +409,7 @@ R_p ← 1686`}
           broker’s spread, or your temperament. Those remain yours. See the{" "}
           <a
             href="/articles/automated-execution-disclaimer"
-            className="text-emerald hover:text-white"
+            className="text-emerald hover:text-ink"
           >
             execution disclaimer
           </a>

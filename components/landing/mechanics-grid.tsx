@@ -31,11 +31,11 @@ export function MechanicsGrid() {
         </p>
         <h2
           id="mechanics-heading"
-          className="mt-4 max-w-2xl text-3xl font-semibold tracking-[-0.03em] text-white sm:text-5xl"
+          className="mt-4 max-w-2xl text-3xl font-semibold tracking-[-0.03em] text-ink sm:text-5xl"
         >
           Three rules. No theatre.
         </h2>
-        <p className="mt-4 max-w-2xl text-base leading-7 text-white/55">
+        <p className="mt-4 max-w-2xl text-base leading-7 text-ink/60">
           BEMXC is a protocol, not a signal shop. Publication is open.
           Verification is mechanical. Custody is refused.
         </p>
@@ -46,10 +46,10 @@ export function MechanicsGrid() {
           <FadeIn key={item.index} delay={i * 0.08}>
             <article className="glass-panel flex h-full flex-col rounded-3xl p-7">
               <p className="font-mono text-[11px] text-emerald">{item.index}</p>
-              <h3 className="mt-6 text-2xl font-semibold tracking-[-0.02em] text-white">
+              <h3 className="mt-6 text-2xl font-semibold tracking-[-0.02em] text-ink">
                 {item.title}
               </h3>
-              <p className="mt-4 text-sm leading-6 text-white/55">{item.body}</p>
+              <p className="mt-4 text-sm leading-6 text-ink/60">{item.body}</p>
             </article>
           </FadeIn>
         ))}

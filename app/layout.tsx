@@ -74,8 +74,8 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0A0D12",
-  colorScheme: "dark",
+  themeColor: "#F6F7F9",
+  colorScheme: "light",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -84,7 +84,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-obsidian text-foreground">
+      <body className="min-h-full flex flex-col bg-background text-foreground">
         <JsonLdScript data={organizationJsonLd} />
         <JsonLdScript data={financialProductJsonLd} />
         <JsonLdScript data={softwareApplicationJsonLd} />

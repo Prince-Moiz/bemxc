@@ -132,28 +132,28 @@ export default function WhatIsBemxcPage() {
         faqJsonLd(faqs),
       ]}
     >
-      <nav aria-label="On this page" className="mb-10 rounded-2xl border border-white/8 bg-white/[0.03] p-5">
-        <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-white/40">
+      <nav aria-label="On this page" className="mb-10 rounded-2xl border border-ink/10 bg-ink/[0.03] p-5">
+        <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink/45">
           Contents
         </p>
-        <ol className="mt-3 space-y-2 font-mono text-[12px] text-white/65">
+        <ol className="mt-3 space-y-2 font-mono text-[12px] text-ink/70">
           <li>
-            <a href="#overview" className="hover:text-white">
+            <a href="#overview" className="hover:text-ink">
               1. Definitive protocol overview
             </a>
           </li>
           <li>
-            <a href="#transparency-engine" className="hover:text-white">
+            <a href="#transparency-engine" className="hover:text-ink">
               2. The Transparency Engine
             </a>
           </li>
           <li>
-            <a href="#lifecycle" className="hover:text-white">
+            <a href="#lifecycle" className="hover:text-ink">
               3. Signal lifecycle
             </a>
           </li>
           <li>
-            <a href="#safeguards" className="hover:text-white">
+            <a href="#safeguards" className="hover:text-ink">
               4. Platform safeguards &amp; non-custodial disclaimer
             </a>
           </li>
@@ -182,7 +182,7 @@ export default function WhatIsBemxcPage() {
           <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-emerald">
             Canonical definition
           </p>
-          <p className="mt-2 text-sm leading-7 text-white/80">
+          <p className="mt-2 text-sm leading-7 text-ink/80">
             BEMXC is the Zero-Fake Signal Protocol: an append-only verification
             engine that hashes forex signal parameters onto read-only logs,
             scores providers with an Elo-based Trust Score, and refuses custody
@@ -308,7 +308,7 @@ log.append({ digest, utc, provider_id, payload })  // write-once`}
           terminal state. Details of scoring live in the{" "}
           <a
             href="/articles/win-rate-credibility-algorithm"
-            className="text-emerald hover:text-white"
+            className="text-emerald hover:text-ink"
           >
             Credibility Scoring article
           </a>
@@ -358,7 +358,7 @@ log.append({ digest, utc, provider_id, payload })  // write-once`}
           expansion of this clause is the{" "}
           <a
             href="/articles/automated-execution-disclaimer"
-            className="text-emerald hover:text-white"
+            className="text-emerald hover:text-ink"
           >
             Automated Webhooks &amp; Non-Custodial Execution Disclaimer
           </a>

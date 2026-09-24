@@ -23,10 +23,10 @@ function DownloadCard({ release }: { release: DownloadRelease }) {
     >
       <div className="flex items-start justify-between gap-4">
         <div>
-          <h2 className="text-2xl font-semibold tracking-[-0.03em] text-white">
+          <h2 className="text-2xl font-semibold tracking-[-0.03em] text-ink">
             {release.name}
           </h2>
-          <p className="mt-1 text-sm text-white/50">{release.subtitle}</p>
+          <p className="mt-1 text-sm text-ink/55">{release.subtitle}</p>
         </div>
         <p className="font-mono text-[12px] text-emerald">
           {release.available ? `v${release.version}` : "Soon"}
@@ -35,24 +35,24 @@ function DownloadCard({ release }: { release: DownloadRelease }) {
 
       <dl className="mt-6 grid grid-cols-2 gap-4 font-mono text-[12px]">
         <div>
-          <dt className="text-white/35">Build</dt>
-          <dd className="mt-1 break-all text-white/80">{release.fileName}</dd>
+          <dt className="text-ink/45">Build</dt>
+          <dd className="mt-1 break-all text-ink/80">{release.fileName}</dd>
         </div>
         <div>
-          <dt className="text-white/35">Size</dt>
-          <dd className="mt-1 text-white/80">{release.size}</dd>
+          <dt className="text-ink/45">Size</dt>
+          <dd className="mt-1 text-ink/80">{release.size}</dd>
         </div>
       </dl>
 
-      <p className="mt-4 text-sm text-white/45">{release.requirements}</p>
+      <p className="mt-4 text-sm text-ink/50">{release.requirements}</p>
 
       <div className="mt-6">
-        <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-white/35">
+        <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink/45">
           Release notes
         </p>
         <ul className="mt-3 space-y-2">
           {release.notes.map((note) => (
-            <li key={note} className="text-sm leading-6 text-white/65">
+            <li key={note} className="text-sm leading-6 text-ink/70">
               {note}
             </li>
           ))}
@@ -66,14 +66,14 @@ function DownloadCard({ release }: { release: DownloadRelease }) {
       {canDownload ? (
         <a
           href={release.url}
-          className="mt-6 inline-flex h-11 w-full items-center justify-center rounded-full bg-emerald text-sm font-medium text-obsidian transition hover:bg-white"
+          className="mt-6 inline-flex h-11 w-full items-center justify-center rounded-full bg-emerald text-sm font-medium text-white transition hover:opacity-90"
           download={release.fileName}
         >
           Download APK
         </a>
       ) : (
         <p
-          className="mt-6 inline-flex h-11 w-full items-center justify-center rounded-full border border-white/12 bg-white/8 text-sm font-medium text-white/70"
+          className="mt-6 inline-flex h-11 w-full items-center justify-center rounded-full border border-ink/12 bg-ink/[0.05] text-sm font-medium text-ink/70"
           aria-label={`${release.name} download available soon`}
         >
           Available soon
@@ -93,20 +93,20 @@ function ChecksumBlock({ sha256 }: { sha256: string }) {
   }
 
   return (
-    <div className="mt-6 rounded-2xl border border-white/8 bg-black/30 p-4">
+    <div className="mt-6 rounded-2xl border border-ink/10 bg-ink/[0.04] p-4">
       <div className="flex items-center justify-between gap-3">
-        <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-white/40">
+        <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink/45">
           SHA-256
         </p>
         <button
           type="button"
           onClick={copy}
-          className="font-mono text-[11px] text-emerald hover:text-white"
+          className="font-mono text-[11px] text-emerald hover:text-ink"
         >
           {copied ? "Copied" : "Copy"}
         </button>
       </div>
-      <p className="mt-2 break-all font-mono text-[11px] leading-5 text-white/70">
+      <p className="mt-2 break-all font-mono text-[11px] leading-5 text-ink/70">
         {sha256}
       </p>
     </div>

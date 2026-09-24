@@ -17,11 +17,11 @@ export function SignalsTable() {
             </p>
             <h2
               id="signals-heading"
-              className="mt-4 text-3xl font-semibold tracking-[-0.03em] text-white sm:text-5xl"
+              className="mt-4 text-3xl font-semibold tracking-[-0.03em] text-ink sm:text-5xl"
             >
               Live signals
             </h2>
-            <p className="mt-4 max-w-xl text-base leading-7 text-white/55">
+            <p className="mt-4 max-w-xl text-base leading-7 text-ink/60">
               FX tape. Win rate is settlement-backed. Unverified desks remain
               visible and marked. This teaser is delayed; the Terminal streams
               the full desk tape.
@@ -29,7 +29,7 @@ export function SignalsTable() {
           </div>
           <Link
             href="/articles/win-rate-credibility-algorithm"
-            className="text-sm text-white/70 underline-offset-4 hover:text-white hover:underline"
+            className="text-sm text-ink/70 underline-offset-4 hover:text-ink hover:underline"
           >
             How Trust Score is computed
           </Link>
@@ -44,7 +44,7 @@ export function SignalsTable() {
                 Interactive live signals teaser table
               </caption>
               <thead>
-                <tr className="border-b border-white/8 text-[11px] uppercase tracking-[0.16em] text-white/40">
+                <tr className="border-b border-ink/10 text-[11px] uppercase tracking-[0.16em] text-ink/45">
                   <th scope="col" className="px-5 py-4 font-medium">
                     Pair
                   </th>
@@ -68,45 +68,45 @@ export function SignalsTable() {
                   return (
                     <tr
                       key={`${row.pair}-${row.provider}`}
-                      className="border-b border-white/6 last:border-0 transition-colors hover:bg-white/[0.03]"
+                      className="border-b border-ink/8 last:border-0 transition-colors hover:bg-ink/[0.03]"
                     >
                       <td className="px-5 py-4">
-                        <p className="font-mono text-sm text-white">
+                        <p className="font-mono text-sm text-ink">
                           {row.pair}
                         </p>
-                        <p className="mt-0.5 font-mono text-[11px] text-white/35">
+                        <p className="mt-0.5 font-mono text-[11px] text-ink/45">
                           {row.broker}
                         </p>
                       </td>
                       <td className="px-5 py-4">
-                        <p className="flex items-center gap-2 text-sm text-white">
+                        <p className="flex items-center gap-2 text-sm text-ink">
                           {row.provider}
                           {row.verified ? (
                             <span className="rounded-full bg-emerald/12 px-2 py-0.5 font-mono text-[10px] text-emerald">
                               VERIFIED
                             </span>
                           ) : (
-                            <span className="rounded-full bg-white/8 px-2 py-0.5 font-mono text-[10px] text-white/45">
+                            <span className="rounded-full bg-ink/[0.05] px-2 py-0.5 font-mono text-[10px] text-ink/50">
                               OPEN
                             </span>
                           )}
                         </p>
-                        <p className="mt-0.5 font-mono text-[11px] text-white/35">
+                        <p className="mt-0.5 font-mono text-[11px] text-ink/45">
                           Elo {row.trustScore}
                         </p>
                       </td>
                       <td className="px-5 py-4">
                         <p
                           className={`font-mono text-sm tabular-nums ${
-                            row.winRate >= 55 ? "text-emerald" : "text-white/80"
+                            row.winRate >= 55 ? "text-emerald" : "text-ink/80"
                           }`}
                         >
                           {row.winRate.toFixed(1)}%
                         </p>
-                        <div className="mt-1 h-1 w-24 overflow-hidden rounded-full bg-white/8">
+                        <div className="mt-1 h-1 w-24 overflow-hidden rounded-full bg-ink/[0.05]">
                           <div
                             className={`h-full ${
-                              row.winRate >= 55 ? "bg-emerald" : "bg-white/30"
+                              row.winRate >= 55 ? "bg-emerald" : "bg-ink/30"
                             }`}
                             style={{ width: `${Math.min(row.winRate, 100)}%` }}
                           />
@@ -120,7 +120,7 @@ export function SignalsTable() {
                         >
                           {row.side}
                         </p>
-                        <p className="mt-0.5 font-mono text-[11px] text-white/40">
+                        <p className="mt-0.5 font-mono text-[11px] text-ink/45">
                           {row.rr} · SL {row.stop}
                         </p>
                       </td>

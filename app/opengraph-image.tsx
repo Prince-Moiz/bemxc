@@ -14,9 +14,9 @@ export default function OpenGraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: "#0A0D12",
+          background: "#F6F7F9",
           padding: 72,
-          color: "white",
+          color: "#0A0D12",
         }}
       >
         <div
@@ -24,7 +24,7 @@ export default function OpenGraphImage() {
             display: "flex",
             fontSize: 22,
             letterSpacing: 8,
-            color: "#10B981",
+            color: "#059669",
           }}
         >
           BEMXC
@@ -48,7 +48,7 @@ export default function OpenGraphImage() {
               display: "flex",
               marginTop: 24,
               fontSize: 28,
-              color: "rgba(255,255,255,0.55)",
+              color: "rgba(10,13,18,0.55)",
             }}
           >
             Verified forex signals. Non-custodial. No profit guarantee.
